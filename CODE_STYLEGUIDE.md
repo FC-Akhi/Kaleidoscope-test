@@ -17,12 +17,12 @@
 	1. Start with capital letters
 	2. Unless the enumerators are defined within their own small namespace or inside a class, they should have a prefix corresponding to the enum declaration name. Example: For enum TokenKind { ... };, use TK_Argument, TK_BasicBlock, etc.
 	3. Exception case: enum for convenience constant does need to follow 2nd rule on prefix
-	```sh
+	For example:
 		enum {
 	  		MaxSize = 42,
 	  		Density = 12
 		};
-	```
+	
 
 
 
