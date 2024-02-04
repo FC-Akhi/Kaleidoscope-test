@@ -336,7 +336,7 @@ static std::unique_ptr<FunctionAst> ParseTopLevelExpr() {
 
 
 
-/// prototype ::= id '(' id* ')'
+/// prototype ::= identifier '(' identifier* ')'
 static std::unique_ptr<PrototypeAst> ParsePrototype() {
 
     std::string FnName;

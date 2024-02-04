@@ -30,7 +30,7 @@ identifierexpr ::= identifier | identifier '(' expression* ')'
 parenexpr      ::= '(' expression ')'
 
 definition 	   ::= 'def' prototype expression
-prototype      ::= identifer '(' identifer* ')'
+prototype      ::= identifier '(' identifier* ')'
 ```
 **This EBNF notation is not complete. But, current version of the code is written on this notation only**
 
