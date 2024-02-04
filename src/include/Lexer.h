@@ -46,7 +46,7 @@ static int getTok() {
     // Skip whitespaces
     while (isspace(lastChar)) {
 
-        lastChar = getchar(); //How getchar is storing char value in int type variable?? What happens??
+        lastChar = getchar(); 
 
         printf("lastChar: %d\n", lastChar);
     }
@@ -56,11 +56,11 @@ static int getTok() {
     if (isalpha(lastChar)) { // return nonzero if lastChar is alphabet
 
 
-        identifierStr = lastChar; // static int kivabe string a cast hocce???
+        identifierStr = lastChar; 
 
         printf("1. identifierStr: %s\n", identifierStr.c_str());
 
-        while (isalnum ((lastChar = getchar()))) { // does isalnum checks for space/enter also
+        while (isalnum ((lastChar = getchar()))) { 
 
             identifierStr += lastChar;
 
@@ -148,7 +148,7 @@ static int getTok() {
     // For other undefined characters
     int thisChar = lastChar;
 
-    lastChar = getchar(); // why they storing another character????
+    lastChar = getchar(); 
 
     return thisChar;
 

@@ -82,7 +82,7 @@ static std::unique_ptr<ExprAst> ParseNumberExpr() {
 
 /// Decision point for parsing primary expressions based on the current token.
 /// It can handle numeric expressions for now.
-/// primary ::= numberexpr | identifierexpr | parenexpr
+/// primary ::= numberexpr
 static std::unique_ptr<ExprAst> ParsePrimary() {
 
     switch(CurTok) {
