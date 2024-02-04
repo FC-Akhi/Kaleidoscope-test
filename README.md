@@ -22,7 +22,7 @@ To compile and run the Kaleidoscope-test project, follow these steps:
 3. Compile the code using the following command:
 
 ```sh
-g++ toy-compiler.cpp -o test
+g++ toy-compiler.cpp -o toy-compiler
 
 ```
 
@@ -30,7 +30,7 @@ Run with command:
 
 ```sh
 
-./test
+./toy-compiler
 
 ```
 
