@@ -70,7 +70,7 @@ static std::unique_ptr<ExprAst> ParseNumberExpr() {
 
     auto Result = std::make_unique<NumberExprAst>(NumVal);
 
-    std::cout << "Result: " << Result->getVal() << std::endl;
+    std::cout << "Result: " << Result->getValue() << std::endl;
 
     getNextToken(); /// eat: move the pointer to the next character
 
@@ -81,7 +81,7 @@ static std::unique_ptr<ExprAst> ParseNumberExpr() {
 
 
 /// identifierexpr ::= identifier
-static std::unique_ptr<ExprAst> ParseIdentifierExpr() {
+static std::unique_ptr<ExprAst> ParseIdentifierOrCallExpr() {
 
     std::string IdName = IdentifierStr;
 
@@ -195,8 +195,6 @@ static std::unique_ptr<ExprAst> ParseExpression() {
     printf("Inside ParseExpression\n");
 
     auto LHS = ParsePrimary();
-
-    std::cout << "LHS: " << LHS->getVal() << std::endl;
 
     /// If we are able to parse it via ParsePrimary()
     if(LHS) {
