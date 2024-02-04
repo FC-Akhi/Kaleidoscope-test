@@ -39,21 +39,27 @@ Run with command:
 The repository is organized into different branches, each serving a specific part of the project's development. The default branch is the master branch. Below are the name of branches available, along with their descriptions:
 
 - Version_1: Parser handles number
+
 	E.g: 89, 785, 5 etc.
 
 - Version_2: Parser handles number and variable 
+
 	E.g: 89, 785, 5, name, foo, employee etc.
 
 - Version_3: Parser handles number, variable and function callee
+
 	E.g: 89, 785, 5, name, foo, employee, foo(2, 3), printForMe(), foobar(a, b)  etc.
 
 - Version_4: Parser handles number, variable, function callee and expressions with operators
+
 	E.g: 89, 785, 5, name, foo, employee, foo(2, 3), printForMe(), foobar(a, b), ```(a+b*c)```  etc.
 
 - Version_5: Parser handles number, variable, function callee, expressions with operators and function definition
+
 	E.g: 89, 785, 5, name, foo, employee, foo(2, 3), printForMe(), foobar(a, b), ```(a+b*c)```, def foo(x)  etc.
 
 - Version_6: Parser handles number, variable, function callee, expressions with operators, function definition and extern
+
 	E.g: 89, 785, 5, name, foo, employee, foo(2, 3), printForMe(), foobar(a, b), ```(a+b*c)```, def foo(x), extern sin(arg) etc.
 
 
