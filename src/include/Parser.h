@@ -86,8 +86,7 @@ static std::unique_ptr<ExprAst> ParseNumberExpr() {
 static std::unique_ptr<ExprAst> ParsePrimary() {
 
     switch(CurTok) {
-
-
+        
 
     case TK_number:
 

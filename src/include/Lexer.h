@@ -44,7 +44,7 @@ static int getTok() {
     static int lastChar = ' ';
 
     // Skip whitespaces
-    while (isspace(lastChar)) {
+    while (std::isspace(lastChar)) {
 
         lastChar = getchar(); 
 
@@ -53,14 +53,14 @@ static int getTok() {
 
 
     // Get identifier
-    if (isalpha(lastChar)) { // return nonzero if lastChar is alphabet
+    if (std::isalpha(lastChar)) { // return nonzero if lastChar is alphabet
 
 
         identifierStr = lastChar; 
 
         printf("1. identifierStr: %s\n", identifierStr.c_str());
 
-        while (isalnum ((lastChar = getchar()))) { 
+        while (std::isalnum ((lastChar = getchar()))) { 
 
             identifierStr += lastChar;
 
@@ -88,7 +88,7 @@ static int getTok() {
 
 
     // Get number
-    if (isdigit(lastChar) || lastChar == '.') {
+    if (std::isdigit(lastChar) || lastChar == '.') {
 
 
         std::string numStr;
@@ -106,11 +106,11 @@ static int getTok() {
 
             printf("2. numStr: %s\n", numStr.c_str());
 
-        } while (isdigit(lastChar) || lastChar == '.');
+        } while (std::isdigit(lastChar) || lastChar == '.');
 
         printf("3. numStr: %s\n", numStr.c_str());
 
-        NumVal = strtod(numStr.c_str(), 0); // converts to double type
+        NumVal = std::strtod(numStr.c_str(), 0); // converts to double type
 
         return TK_number;
 
